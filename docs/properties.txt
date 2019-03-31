@@ -1,0 +1,56 @@
+Damage +#X-#Y : dmg
+
+Adds the calculated amount to both minimum and maximum damage. This added damage is not shown in the Character screen.
+
++#X-#Y% Enhanced Damage : dmg%
++#X-#Y Minimum Damage : dmg-min
++#X-#Y Maximum Damage : dmg-max
+Adds +#X-#Y Damage : dmg-norm
+
+If an item uses both +min and +max damage, it will actually just display "adds [MIN]-[MAX] damage".
+If minimum damage exceeds maximum damage, maximum damage will be minimum damage + 1.
+
+A weapon's minimum and maximum damage are calculated as follows:
+
+    For Thrown and Melee Weapons:
+
+    Final_Min_Damage = Weapon_Min_Damage * (Str + 100) / 100
+    Final_Max_Damage = Weapon_Max_Damage * (Str + 100) / 100
+
+    For Bows and Crossbows:
+
+    Final_Min_Damage = Weapon_Min_Damage * (Dex + 100) / 100
+    Final_Max_Damage = Weapon_Max_Damage * (Dex + 100) / 100
+
+The total damage dealt is then calculated thusly:
+
+    Minimum Damage = (Weapon Minimum Damage + (+x To Minimum Damage)) * (1 + StatsBonus + (+x% Enhanced Damage) / 100) * Modifier
+    Maximum Damage = (Weapon Maximum Damage + (+x To Maximum Damage)) * (1 + StatsBonus + (+x% Enhanced Damage) / 100) * Modifier
+
+Where:
+
+    +x % Enhanced Damage = All % enhanced damage from items and skills (including % enhanced damage vs. demons, etc.)
+
+    StatsBonus = a damage bonus you get from your strength and/or Dexterity (depends on what kind of weapon you're using).
+
+		Hammers (War Hammer, Maul, Great Maul and their upgrades) : 1.10*str / 100
+		Daggers, Throwing Weapons and Assassin Claws: (0.75*str / 100) + (0.75*dex / 100)
+		Bows and Crossbows: dex / 100
+		Amazon Only Spears/Javelins: (0.80*str / 100) + (0.50 *dex /100)
+		Other Weapons: str / 100
+
+    		(Rounded down to 0.01 accuracy (ie, for Hammers 157 Strength is a StatsBonus of 1.72))
+
+    Modifier =
+    	Default = 1
+    	Multiple Shot/Strafe/Lightning Bolt = 0.75
+    	Critical Hit/Deadly Strike = 2
+    	Blade Fury (1-handed weapons) = 0.75
+    	Blade Sentinel/Blade Fury (2-handed weapons) = 0.375
+    	Blade Shield = 0.25
+
++x % Enhanced Damage jewels in weapons enhances the weapon damage directly, but if you place the jewels in armor/shield/helm, the bonus will be added along with the Stats-bonus and skills. 
+
+Source:
+
+http://classic.battle.net/diablo2exp/basics/characters.shtml

@@ -1,0 +1,858 @@
+{--categories--}
+Armour
+Jewellery
+Weapons
+
+{--colours--}
+Default
+White : whit
+Light Gray : lgry
+Dark Gray : dgry
+Black : blac
+Light Blue : lblu
+Dark Blue : dblu
+Crystal Blue : cblu
+Light Red : lred
+Dark Red : dred
+Crystal Red : cred
+Light Green : lgrn
+Dark Green : dgrn
+Crystal Green : cgrn
+Light Yellow : lyel
+Dark Yellow : dyel
+Light Gold : lgld
+Dark Gold : dgld
+Light Purple : lpur
+Dark Purple : dpur
+Orange : oran
+Bright White : bwht
+
+{--class_armour--}
+Armour
+Barbarian Helmets
+Belts
+Boots
+Circlets
+Druid Pelts
+Gloves
+Helmets
+Necromancer Heads
+Paladin Shields
+Shields
+
+{--class_jewellery--}
+Amulets
+Charms
+Jewels
+Rings
+
+{--class_weapons--}
+Amazon Weapons
+Axes
+Bows
+Crossbows
+Daggers
+Javelins
+Katars
+Maces
+Orbs
+Polearms
+Scepters
+Spears
+Staves
+Swords
+Throwing Weapons
+Wands
+
+{--image_replacements--}
+hax : haxu
+axe : axeu
+mpi : mpiu
+btx : btxu : 9btu
+gax : gaxu
+wnd : wndu
+bwn : bwnu
+clb : clbu
+spc : spcu
+mst : mstu
+mau : mauu
+scm : scmu
+sbr : 9sbu
+flc : flcu
+bsd : bsdu
+lsd : lsdu : 9lsu
+2hs : 2hsu : 9fbu
+gis : gisu
+gsd : gsdu
+krs : krsu
+tri : triu
+scy : scyu : 9s8u
+cst : cstu
+cbw : cbwu
+sbb : sbbu : 8s8u
+swb : swbu
+lxb : lxbu : 8lxu
+mxb : mxbu : 8mxu
+hxb : hxbu
+rxb : rxbu
+cap : capu
+hlm : hlmu
+bhm : bhmu
+ful : fulu
+aar : aaru : xaru
+buc : bucu
+sml : smlu : xmlu
+lrg : lrgu : xrgu
+bsh : bshu : xshu
+spk : spku : xpku
+kit : kitu
+tow : towu
+gts : gtsu
+gix : 9giu
+gwn : 9gwu
+gma : 9gmu
+crs : 9cru : crsu
+bld : 9blu
+brn : 9bru
+axf : axfu
+wst : 8wsu
+lbw : 8lbu
+skp : xkpu
+crn : xrnu
+stu : xtuu
+tkn : tk3
+
+{--images_inventory--}
+Default
+\n
+Standard Images
+\n
+Amulet 1 : amu1
+Amulet 2 : amu2
+Amulet 3 : amu3
+Amulet of the Viper : vip
+Arrows : qvr
+Bolts : cqv
+Book of Skill : sbk
+Charm (Small) 1 : ch1
+Charm (Small) 2 : ch4
+Charm (Small) 3 : ch7
+Charm (Large) 1 : ch2
+Charm (Large) 2 : ch5
+Charm (Large) 3 : ch8
+Charm (Grand) 1 : ch3
+Charm (Grand) 2 : ch6
+Charm (Grand) 3 : ch9
+Ear : ear
+Golden Bird : gbi
+Hell Forge Hammer : hfh
+Hellfire Torch : trch
+Horadric Cube : box
+Horadric Malus : hmr
+Horadric Scroll : hscr
+Horadric Staff : hst
+Jade Figurine : jbi
+Jewel (Red) : jw5
+Jewel (Orange) : jw3
+Jewel (Yellow) : jw6
+Jewel (Green) : jw4
+Jewel (Blue) : jw2
+Jewel (Pink) : jw1
+Key : key
+Khalim's Brain : brnz
+Khalim's Eye : eye
+Khalim's Flail : qf1
+Khalim's Heart : hrt
+Khalim's Will : qf2
+Lam Esen's Tome : bbb
+Mephisto's Key : mph
+Mephisto's Soulstone : mss
+Ring 1 : rin1
+Ring 2 : rin2
+Ring 3 : rin3
+Ring 4 : rin4
+Ring 5 : rin5
+Scroll of Inifuss : scb
+The Gidbinn : g33
+Tome of Identify : rbk
+Tome of Town Portal : bbk
+Wirt's Leg : leg
+\n
+Unused Images
+\n
+Amulet : amu
+Armour Belt : blt
+Armour Boots : bot
+Bone Pile 1 : bonr1
+Bone Pile 2 : bonr2
+Bone Pile 3 : bonr3
+Bone Pile 4 : bonr4
+Candle : cndl
+Diablo's Soulstone : dss
+Flag : flag
+Gem Blue : gmb
+Gem Green : gmg
+Gem Red : gmr
+Gem Violet : gmv
+Gem White : gmw
+Gem Yellow : gmy
+Gem Small Blue : gsb
+Gem Small Green : gsg
+Gem Small Purple : gsv
+Gem Small Red : gsr
+Gem Small White : gsw
+Gem Small Yellow : gsy
+Gem Pile 1 : fary1
+Gem Pile 2 : fary2
+Gem Pile 3 : fary3
+Gem Pile 4 : fary4
+Gold Pile 1 : gld
+Gold Pile 2 : gldm
+Gold Pile 3 : gldh
+Herb : hrb
+Organ Fang : fang
+Organ Horn : horn
+Organ Jawbone : jaw
+Organ Quill : quil
+Organ Spleen : sple
+Organ Tail : tail
+Potion Black : npl
+Potion Blue : mpo
+Potion Blue Full : bpl
+Potion Blue Large : pob
+Potion Blue Medium : mpf
+Potion Blue Rejuvenation : bps
+Potion Green : pog
+Potion Mixed : pot
+Potion Orange : poo
+Potion Purple : pov
+Potion Red : hpo
+Potion Red Full : rpl
+Potion Red Large : fhp
+Potion Red Medium : hpf
+Potion Red Rejuvenation : rps
+Potion White : wpl
+Potion Yellow : ypl
+Ring : rin
+Soul : sol
+Weapon Bastard Sword : bas
+Weapon Blade : bla
+Weapon Decoy Dagger : d33
+Weapon Glaive : gla
+Weapon Glaive x 3 : gl3
+Weapon Great Axe : grx
+Weapon Javelins x 3 : ja3
+Weapon Long Bow : slb
+Weapon Throwing Axe (Stack) : ta3
+Weapon Throwing Knife x 3 : tk3
+
+{--images_world--}
+Default
+\n
+Standard Images
+\n
+Book of Skill : flpbbk
+Charm (Small) : flpchm1
+Charm (Large) : flpchm2
+Charm (Grand) : flpchm3
+Ear : flpear
+Gold : flpgld
+Golden Bird : flpgbi
+Hammer : flphmr
+Hellfire Torch : flptrch
+Horadric Cube : flpbox
+Horadric Scroll : flphscr
+Jade Figurine : flpjbi
+Key : flpkey
+Khalim's Brain : flpbrnz
+Khalim's Eye : flpeye
+Khalim's Heart : flphrt
+Lam Esen's Tome : flpbbb
+Mephisto's Key : flpmph
+Mephisto's Soulstone : flpmss
+Quill : flpquil
+Quiver : flpqvr
+Scroll of Inifuss : flpscr
+Tome of Identify : flprbk
+Tome of Town Portal : flpbbk
+Wirt's Leg : flpleg
+\n
+Unused Images
+\n
+Amulet of the Viper : flpvip
+Armour Belt : flpblt
+Armour Boots : bot
+Armour Circlet : flpci3
+Armour Skull Cap : fkpskp
+Armour Tower Shield : flptwr
+Bone Pile 1 : flpbonr1
+Bone Pile 2 : flpbonr2
+Bone Pile 3 : flpbonr3
+Bone Pile 4 : flpbonr4
+Candle : flpcndl
+Flag : flpflag
+Gem / Soul : flpsol
+Gem Blue : flpgmb
+Gem Green : flpgmg
+Gem Purple : flpgmv
+Gem Red : flpgmr
+Gem White : flpgmw
+Gem Yellow : flpgmy
+Gem Pile 1 : flpfary1
+Gem Pile 2 : flpfary2
+Gem Pile 3 : flpfary3
+Gem Pile 4 : flpfary4
+Gold Pile : flpgl1
+Organ Fang : flpfang
+Organ Heart : flpchm
+Organ Horn : flphorn
+Organ Jaw : flpjaw
+Organ Quill : quil
+Organ Spleen / Soul : flpsple
+Organ Tail : flptail
+Potion Antidote Large : flpnpl
+Potion Blue (Jar) : potblu
+Potion Blue (Rectangular) : flpblu
+Potion Blue 2 (Rectangular) : mana1
+Potion Elixir : flppot
+Potion Green (Jar) : potgrn
+Potion Orange (Jar) : potorg
+Potion Purple (Jar) : potpur
+Potion Red (Jar) : health1
+Potion Red (Jar) : potred
+Potion Red (Rectangular) : flpred
+Potion Red Large : potbrd
+Potion Rejuvenation Small : flpgpm
+Potion Rejuvenation Small 2 : flppopm
+Potion White Large : flpwpl
+Potion Yellow (Jar) : potyel
+Potion Yellow Large : flpypl
+Tome of Town Portal : bok
+Weapon Crossbow : flpmxbu
+Weapon Heavy Crossbow : flphxbu
+Weapon Light Crossbow : flplxbu
+Weapon Repeating Crossbow : flprxbu
+Weapon Scimitar : flpscmu
+Weapon Two-Handed Axe : flpegx
+
+{--sounds--}
+Default
+\n
+Standard Sounds
+\n
+Amulet : item_amulet : 12
+Belt : item_belt : 12
+Bone : item_monsterbone : 12
+Book : item_book : 12
+Boots : item_boots : 12
+Bow : item_bow : 12
+Cap : item_cap : 12
+Chain Armour : item_chainarmor : 12
+Chain Boots : item_bootschain : 12
+Chain Gloves : item_gloveschain : 12
+Charm : item_charm : 12
+Crossbow : item_crossbow : 12
+Gem : item_gem : 12
+Gloves : item_gloves : 12
+Gold : item_gold : 12
+Head : item_head : 12
+Helm : item_helm : 12
+Javelins : item_javelins : 12
+Jewel : item_jewel : 12
+Key : item_key : 12
+Light Armour : item_lightarmor : 12
+Metal Boots : item_bootsmetal : 12
+Metal Gloves : item_glovesmetal : 12
+Metal Shield : item_metalshield : 12
+Metal Weapon Large : item_largemetalweapon : 12
+Metal Weapon Small : item_smallmetalweapon : 12
+Orb : item_orb : 12
+Plate Armour : item_platearmor : 12
+Potion : item_potion : 14
+Quiver : item_quiver : 12
+Ring : item_ring : 12
+Rune : item_rune : 12
+Scroll : item_scroll : 10
+Staff : item_staff : 12
+Sword : item_sword : 12
+Wand : item_wand : 12
+Wooden Shield : item_woodshield : 12
+Wooden Weapon Large : item_woodweaponlarge : 12
+\n
+Unused Sounds
+\n
+Bone : item_monsterbone : 12
+Evil Hole : item_herb : 12
+Guts : item_monsterguts : 14
+Whip : item_whip : 12
+
+{--type_a_armour--}
+Quilted Armor : Ghost Armour : Dusk Shroud : qlt : qui : xui : uui : 1 : 34 : 65 : 0 : 22 : 49
+Leather Armor : Serpentskin Armour : Wyrmhide : lea : lea : xea : uea : 3 : 36 : 67 : 0 : 24 : 50
+Hard Leather Armor : Demonhide Armour : Scarab Husk : hla : hla : xla : ula : 5 : 37 : 68 : 0 : 25 : 51
+Studded Leather : Trellised Armour : Wire Fleece : stu : stu : xtu : utu : 8 : 40 : 70 : 0 : 25 : 53
+Ring Mail : Linked Mail : Diamond Mail : rng : rng : xng : ung : 11 : 42 : 72 : 0 : 25 : 54
+Scale Mail : Tigulated Mail : Loricated Mail : scl : scl : xcl : ung : 13 : 43 : 73 : 0 : 25 : 55
+Chain Mail : Mesh Armour : Boneweave : chn : chn : xch : uch : 15 : 62 : 45 : 0 : 25 : 47
+Breast Plate : Cuirass : Great Hauberk : brs : brs : xrs : urs : 18 : 47 : 75 : 0 : 25 : 56
+Splint Mail : Russet Armour : Balrog Skin : spl : spl : xpl : upl : 20 : 49 : 76 : 0 : 25 : 57
+Plate Mail : Templar Coat : Hellforge Plate : plt : plt : xpl : upl : 24 : 52 : 78 : 0 : 25 : 59
+Field Plate : Sharktooth Armour : Kraken Shell : fld : fld : xld : uld : 28 : 55 : 81 : 0 : 25 : 61
+Gothic Plate : Embossed Plate : Lacquered Plate : gth : gth : xth : uth : 32 : 58 : 82 : 0 : 25 : 62
+Full Plate Mail : Chaos Armour : Shadow Plate : ful : ful : xul : uul : 37 : 61 : 83 : 0 : 25 : 64
+Ancient Armor : Ornate Plate : Sacred Armour : aar : aar : xar : uar : 40 : 64 : 85 : 0 : 25 : 66
+Light Plate : Mage Plate : Archon Plate : ltp : ltp : xtp : utp : 35 : 60 : 84 : 0 : 25 : 63
+
+{--type_a_barbhelms--}
+Jawbone Cap : Jawbone Visor : Carnage Helm : ba1 : ba1 : ba6 : bab : 4 : 33 : 60 : 3 : 25 : 45
+Fanged Helm : Lion Helm : Fury Visor : ba2 : ba2 : ba7 : bac : 8 : 38 : 66 : 6 : 29 : 49
+Horned Helm : Rage Mask : Destroyer Helm : ba3 : ba3 : ba8 : bad : 16 : 44 : 73 : 12 : 29 : 54
+Assault Helm : Savage Helmet : Conqueror Crown : ba4 : ba4 : ba9 : bae : 20 : 49 : 80 : 15 : 32 : 60
+Avenger Guard : Slayer Guard : Guardian Crown : ba5 : ba5 : baa : baf : 24 : 54 : 85 : 18 : 40 : 65
+
+{--type_a_belts--}
+Sash : Demonhide Sash : Spiderweb Sash : lbl : lbl : zlb : ulc : 3 : 36 : 61 : 0 : 24 : 46
+Light Belt : Sharkskin Belt : Vampirefang Belt : vbl : vbl : zvb : uvc : 7 : 39 : 68 : 0 : 25 : 51
+Belt : Mesh Belt : Mithril Coil : mbl : mbl : zmb : umc : 12 : 43 : 75 : 0 : 25 : 56
+Heavy Belt : Battle Belt : Troll Belt : tbl : tbl : ztb : utc : 20 : 49 : 82 : 0 : 25 : 62
+Plated Belt : War Belt : Colossus Girdle : hbl : hbl : zhb : uhc : 27 : 54 : 85 : 0 : 25 : 67
+
+{--type_a_boots--}
+Boots : Demonhide Boots : Wrymhide Boots : lbt : ltb : xlb : ulb : 3 : 36 : 60 : 0 : 24 : 45
+Heavy Boots : Sharkskin Boots : Scarabshell Boots : vbt : vbt : xvb : uvb : 7 : 39 : 66 : 0 : 25 : 49
+Chain Boots : Mesh Boots : Boneweave Boots : mbt : mbt : xmb : umb : 12 : 43 : 72 : 0 : 25 : 54
+Light Plated Boots : Battle Boots : Mirrored Boots : tbt : tbt : xtb : utb : 20 : 49 : 81 : 0 : 25 : 60
+Greaves : War Boots : Myrmidon Greaves : hbt : hbt : xhb : uhb : 27 : 54 : 85 : 0 : 25 : 65
+
+{--type_a_circlets--}
+Circlet : Circlet : Circlet : ci0 : ci0 : ci0 : ci0 : 24 : 24 : 24 : 16 : 16 : 16
+Coronet : Coronet : Coronet : ci1 : ci1 : ci1 : ci1 : 52 : 52 : 52 : 39 : 39 : 39
+Tiara : Tiara : Tiara : ci2 : ci2 : ci2 : ci2 : 70 : 70 : 70 : 52 : 52 : 52
+Diadem : Diadem : Diadem : ci3 : ci3 : ci3 : ci3 : 85 : 85 : 85 : 64 : 64 : 64
+
+{--type_a_druidpelts--}
+Wolf Head : Alpha Helm : Blood Spirit : dr1 : dr1 : dr6 : drb : 4 : 35 : 62 : 3 : 26 : 46
+Hawk Head : Griffon Headress : Sun Spirit : dr2 : dr2 : dr7 : drc : 8 : 40 : 69 : 6 : 30 : 51
+Antlers : Hunter's Guise : Earth Spirit : dr3 : dr3 : dr8 : drd : 16 : 46 : 76 : 12 : 29 : 57
+Falcon Mask : Sacred Feathers : Sky Spirit : dr4 : dr4 : dr9 : dre : 20 : 50 : 83 : 15 : 32 : 62
+Spirit Mask : Totemic Mask : Dream Spirit : dr5 : dr5 : dra : drf : 24 : 55 : 85 : 18 : 41 : 66
+
+{--type_a_gloves--}
+Leather Gloves : Demonhide Gloves : Bramble Mitts : lgl : lgl : xlg : ulg : 3 : 33 : 57 : 0 : 21 : 42
+Heavy Gloves : Sharkskin Gloves : Vampirebone Gloves : vgl : vgl : xvg : uvg : 7 : 39 : 63 : 0 : 25 : 47
+Chain Gloves : Heavy Bracers : Vambraces : mgl : mgl : xmg : umg : 12 : 43 : 69 : 0 : 25 : 51
+Light Gauntlets : Battle Gauntlets : Crusader Gauntlets : tgl : tgl : xtg : utg : 20 : 49 : 76 : 0 : 25 : 57
+Gauntlets : War Gauntlets : Ogre Gauntlets : hgl : hgl : xhg : uhg : 27 : 54 : 85 : 0 : 25 : 64
+
+{--type_a_helmets--}
+Cap : War Hat : Shako : cap : cap : xap : uap : 1 : 34 : 58 : 0 : 22 : 43
+Skull Cap : Sallet : Hydraskull : skp : skp : xkp : ukp : 5 : 37 : 63 : 0 : 25 : 47
+Helm : Casque : Armet : hlm : hlm : xlm : ulm : 11 : 42 : 68 : 0 : 25 : 51
+Full Helm : Basinet : Giant Conch : fhl : fhl : xhl : uhl : 15 : 45 : 54 : 0 : 25 : 40
+Great Helm : Winged Helm : Spired Helm : ghm : ghm : xhm : uhm : 23 : 51 : 79 : 0 : 25 : 59
+Mask : Death Mask : Demonhead : msk : msk : xsk : usk : 19 : 48 : 74 : 0 : 25 : 55
+Bone Helm : Grim Helm : Bone Visage : bhm : bhm : xh9 : uh9 : 22 : 50 : 84 : 0 : 25 : 63
+Crown : Grand Crown : Corona : crn : crn : xrn : urn : 29 : 55 : 85 : 0 : 25 : 66
+
+{--type_a_necroheads--}
+Preserved Head : Mummified Trophy : Minion Skull : ne1 : ne1 : ne6 : neb : 4 : 33 : 59 : 3 : 24 : 44
+Zombie Head : Fetish Trophy : Hellspawn Skull : ne2 : ne2 : ne7 : nec : 8 : 39 : 67 : 6 : 29 : 50
+Unraveller Head : Sexton Trophy : Overseer Skull : ne3 : ne3 : ne8 : ned : 16 : 45 : 66 : 12 : 33 : 49
+Gargoyle Head : Cantor Trophy : Succubae Skull : ne4 : ne4 : ne9 : nee : 20 : 49 : 81 : 15 : 36 : 60
+Demon Head : Heirophant Trophy : Bloodlord Skull : ne5 : ne5 : nea : nef : 24 : 54 : 85 : 18 : 40 : 65
+
+{--type_a_palshields--}
+Targe : Akaran Targe : Sacred Targe : pa1 : pa1 : pa6 : pab : 4 : 35 : 63 : 3 : 26 : 47
+Rondache : Akaran Rondache : Sacred Rondache : pa2 : pa2 : pa7 : pac : 8 : 40 : 70 : 6 : 30 : 52
+Heraldic Shield : Protector Shield : Kurast Shield : pa3 : pa3 : pa8 : pad : 16 : 46 : 74 : 12 : 34 : 55
+Aerin Shield : Guilded Shield : Zakarum Shield : pa4 : pa4 : pa9 : pae : 20 : 51 : 82 : 15 : 38 : 61
+Crown Shield : Royal Shield : Vortex Shield : pa5 : pa5 : paa : paf : 24 : 55 : 85 : 18 : 41 : 66
+
+{--type_a_shields--}
+Buckler : Defender : Heater : buc : buc : xuc : uuc : 1 : 34 : 58 : 0 : 22 : 43
+Small Shield : Round Shield : Luna : sml : sml : xml : uml : 5 : 37 : 61 : 0 : 25 : 45
+Large Shield : Scutum : Hyperion : lrg : lrg : xrg : urg : 11 : 42 : 64 : 0 : 25 : 48
+Kite Shield : Dragon Shield : Monarch : kit : kit : xit : uit : 15 : 45 : 72 : 0 : 25 : 54
+Spiked Shield : Barbed Shield : Blade Barrier : spk : spk : xpk : upk : 11 : 42 : 68 : 0 : 25 : 51
+Tower Shield : Pavise : Aegis : tow : tow : xow : uow : 22 : 50 : 79 : 0 : 25 : 59
+Bone Shield : Grim Shield : Troll Nest : bsh : bsh : xsh : ush : 19 : 48 : 76 : 0 : 25 : 57
+Gothic Shield : Ancient Shield : Ward : gts : gts : xts : uts : 30 : 56 : 84 : 0 : 25 : 63
+
+{--type_j_amulets--}
+Amulet : Amulet : Amulet : amu1 : amu : amu : amu : 1 : 1 : 1 : 0 : 0 : 0
+Amulet of the Viper : Amulet of the Viper : Amulet of the Viper : vip : vip : vip : vip : 15 : 15 : 15 : 0 : 0 : 0
+
+{--type_j_charms--}
+Small Charm : Small Charm : Small Charm : ch1 : cm1 : cm1 : cm1 : 28 : 28 : 28 : 0 : 0 : 0
+Large Charm : Large Charm : Large Charm : ch2 : cm2 : cm2 : cm2 : 14 : 14 : 14 :  0 : 0 : 0
+Grand Charm : Grand Charm : Grand Charm : ch3 : cm3 : cm3 : cm3 : 1 : 1 : 1 : 0 : 0 : 0
+
+{--type_j_jewels--}
+Jewel : Jewel : Jewel : jw5 : jew : jew : jew : 1 : 1 : 1 : 0 : 0 : 0
+
+{--type_j_rings--}
+Ring : Ring : Ring : rin1 : rin : rin : rin : 1 : 1 : 1 : 0 : 0 : 0
+
+{--type_w_amazon--}
+Stag Bow : Ashwood Bow : Matriarchal Bow : am1 : am1 : am6 : amb : 18 : 39 : 53 : 14 : 29 : 39
+Reflex Bow : Ceremonial Bow : Grand Matron Bow : am2 : am2 : am7 : amc : 27 : 47 : 78 : 20 : 35 : 58
+Maiden Spear : Ceremonial Spear : Matriarchal Spear : am3 : am3 : am8 : amd : 18 : 43 : 61 : 14 : 32 : 45
+Maiden Pike : Ceremonial Pike : Matriarchal Pike : am4 : am4 : am9 : ame : 27 : 51 : 81 : 20 : 38 : 60
+Maiden Javelin : Ceremonial Javelin : Matriarchal Javelin : am5 : am5 : ama : amf : 23 : 35 : 65 : 17 : 26 : 48
+
+{--type_w_axes--}
+Hand Axe : Hatchet : Tomahawk : hax : hax : 9ha : 7ha : 3 : 31 : 54 : 0 : 19 : 40
+Axe : Cleaver : Small Crescent : axe : axe : 9ax : 7ax : 7 : 34 : 61 : 0 : 22 : 45
+Double Axe : Twin Axe : Ettin Axe : 2ax : 2ax : 92a : 72a : 13 : 39 : 70 : 0 : 25 : 52
+Military Pick : Crowbill : War Spike : mpi : mpi : 9mp : 7mp : 19 : 43 : 79 : 0 : 25 : 59
+War Axe : Naga : Berserker Axe : wax : wax : 9wa : 7wa : 25 : 48 : 85 : 0 : 25 : 64
+Large Axe : Military Axe : Feral Axe : lax : lax : 9la : 7la : 6 : 34 : 57 : 0 : 22 : 42
+Broad Axe : Bearded Axe : Silver Edged Axe : brx : bax : 9ba : 7ba : 12 : 38 : 65 : 0 : 25 : 48
+Battle Axe : Tabar : Decapitator : btx : btx : 9bt : 7bt : 17 : 42 : 73 : 0 : 25 : 54
+Great Axe : Gothic Axe : Champion Axe : gax : gax : 9ga : 7ga : 23 : 46 : 82 : 0 : 25 : 61
+Giant Axe : Ancient Axe : Glorious Axe : gix : gix : 9gi : 7gi : 27 : 51 : 85 : 0 : 25 : 66
+
+{--type_w_bows--}
+Short Bow : Edge Bow : Spider Bow : sbw : sbw : 8sb : 6sb : 1 : 30 : 55 : 0 : 18 : 41
+Hunter's Bow : Razor Bow : Blade Bow : hbw : hbw : 8hb : 6hb : 5 : 33 : 60 : 0 : 21 : 45
+Long Bow : Cedar Bow : Shadow Bow : lbw : lbw : 8lb : 6lb : 8 : 35 : 63 : 0 : 23 : 47
+Composite Bow : Double Bow : Great Bow  : cbw : cbw : 8cb : 6cb : 12 : 39 : 68 : 0 : 25 : 51
+Short Battle Bow : Short Siege War : Diamond Bow : sbb : sbb : 8s8 : 6s7 : 18 : 43 : 72 : 0 : 25 : 54
+Long Battle Bow : Long Siege Bow : Crusader Bow : lbb : lbb : 8l8 : 6l7 : 23 : 46 : 77 : 0 : 25 : 57
+Short War Bow : Rune Bow : Ward Bow : swb : swb : 8sw : 6sw : 27 : 49 : 80 : 0 : 25 : 60
+Long War Bow : Gothic Bow : Hydra Bow : lwb : lwb : 8lw : 6lw : 31 : 52 : 85 : 0 : 25 : 63
+
+{--type_w_crossbows--}
+Light Crossbow : Arbalest : Pellet Bow : lxb : lxb : 8lx : 6lx : 6 : 34 : 57 : 0 : 22 : 42
+Crossbow : Siege Crossbow : Gorgon Crossbow : mxb : mxb : 8mx : 6mx : 15 : 40 : 67 : 0 : 25 : 50
+Heavy Crossbow : Ballista : Collosus Crossbow : hxb : hxb : 8hx : 6hx : 24 : 47 : 75 : 0 : 25 : 56
+Repeating Crossbow : Chu-Ko-Nu : Demon Crossbow : rxb : rxb : 8rx : 6rx : 33 : 54 : 84 : 0 : 25 : 63
+
+{--type_w_daggers--}
+Dagger : Poignard : Bone Knife : dgr : dgr : 9dg : 7dg : 3 : 31 : 58 : 0 : 19 : 43
+Dirk : Rondel : Mithril Point : dir : dir : 9di : 7di : 9 : 36 : 70 : 0 : 24 : 52
+Kris : Cinquedeas : Fanged Knife : krs : kri : 9kr : 7kr : 17 : 42 : 83 : 0 : 25 : 62
+Blade : Stilleto : Legend Spike : bld : bld : 9bl : 7bl : 23 : 46 : 85 : 0 : 25 : 66
+
+{--type_w_javelins--}
+Javelin : War Javelin : Hyperion Javelin : jav : jav : 9ja : 7ja : 1 : 30 : 54 : 0 : 18 : 40
+Pilum : Great Pilum : Stygian Pilum : pil : pil : 9pi : 7pi : 10 : 37 : 62 : 0 : 25 : 46
+Short Spear : Simbilan : Balrog Spear : ssp : ssp : 9s9 : 7s7 : 15 : 40 : 71 : 0 : 25 : 53
+Glaive : Spiculum : Ghost Glaive : glv : glv : 9gl : 7gl : 23 : 46 : 79 : 0 : 25 : 59
+Throwing Spear : Harpoon : Winged Harpoon : tsp : tsp : 9ts : 7ts : 29 : 51 : 85 : 0 : 25 : 65
+
+{--type_w_katars--}
+Katar : Quhab : Suwayyah : ktr : ktr : 9ar : 7ar : 1 : 28 : 59 : 0 : 21 : 44
+Wrist Blade : Wrist Spike : Wrist Sword : ktr : wrb : 9wb : 7wb : 9 : 32 : 62 : 0 : 24 : 46
+Hatchet Hands : Fascia : War Fist : axf : axf : 9xf : 7xf : 12 : 36 : 68 : 0 : 27 : 51
+Cestus : Hand Scythe : Battle Cestus : axf : ces : 9cs : 7cs : 15 : 41 : 73 : 0 : 30 : 54
+Claws : Greater Claws : Feral Claws : clw : clw : 9lw : 7lw : 18 : 45 : 78 : 0 : 33 : 58
+Blade Talons : Greater Talons : Runic Talons : clw : btl : 9hw : 7hw : 21 : 50 : 81 : 0 : 37 : 60
+Scissors Katar : Scissors Quhab : Scissors Suwayyah : skr : skr : 9qr : 7qr : 24 : 54 : 85 : 0 : 40 : 64
+
+{--type_w_maces--}
+Club : Cudgel : Truncheon : clb : clb : 9cl : 7cl : 1 : 30 : 52 : 0 : 18 : 39
+Spiked Club : Barbed Club : Tyrant Club : spc : spc : 9sp : 7sp : 4 : 32 : 57 : 0 : 20 : 42
+Mace : Flanged Mace : Reinforced Mace : mac : mac : 9ma : 7ma : 8 : 35 : 63 : 0 : 23 : 47
+Morning Star : Jagged Star : Devil Star : mst : mst : 9mt : 7mt : 13 : 39 : 70 : 0 : 25 : 52
+Flail : Knout : Scourge : fla : fla : 9fl : 7fl : 19 : 43 : 76 : 0 : 25 : 57
+War Hammer : Battle Hammer : Legendary Mallet : whm : whm : 9wh : 7wh : 25 : 48 : 82 : 0 : 25 : 61
+Maul : War Club : Ogre Maul : mau : mau : 9m9 : 7m7 : 21 : 45 : 69 : 0 : 25 : 51
+Great Maul : Martel de Fer : Thunder Maul : gma : gma : 9gm : 7gm : 32 : 53 : 85 : 0 : 25 : 65
+Khalim's Flail : Khalim's Flail : Khalim's Flail : qf1 : qf1 : qf1 : qf1 : 0 : 0 : 0 : 0 : 0 : 0
+Khalim's Will : Khalim's Will : Khalim's Will : qf2 : qf2 : qf2 : qf2 : 0 : 0 : 0 : 0 : 0 : 0
+Hell Forge Hammer : Hell Forge Hammer : Hell Forge Hammer : hfh : hfh : hfh : hfh : 0 : 0 : 0 : 0 : 0 : 0
+
+{--type_w_orbs--}
+Eagle Orb : Glowing Orb : Heavenly Stone : ob1 : ob1 : ob6 : obb : 1 : 32 : 59 : 0 : 24 : 44
+Sacred Globe : Crystalline Globe : Eldritch Orb : ob2 : ob2 : ob7 : obc : 8 : 37 : 67 : 0 : 27 : 50
+Smoked Sphere : Cloudy Sphere : Demon Heart : ob3 : ob3 : ob8 : obd : 12 : 41 : 75 : 8 : 30 : 56
+Clasped Orb : Sparkling Ball : Vortex Orb : ob4 : ob4 : ob9 : obe : 17 : 46 : 84 : 0 : 13 : 34 : 63
+Jared's Stone : Swirling Crystal : Dimensional Shard : ob5 : ob5 : oba : obf : 24 : 50 : 85 : 18 : 37 : 66
+
+{--type_w_polearms--}
+Bardiche : Lochaber Axe : Ogre Axe : bar : bar : 9b7 : 7o7 : 5 : 33 : 60 : 0 : 21 : 45
+Voulge : Bill : Colossus Voulge : vou : vou : 9vo : 7vo : 11 : 37 : 64 : 0 : 25 : 48
+Scythe : Battle Scythe : Thresher : scy : scy : 9s8 : 7s8 : 15 : 40 : 71 : 0 : 25 : 53
+Poleaxe : Partizan : Cryptic Axe : pax : pax : 9pa : 7pa : 21 : 35 : 79 : 0 : 23 : 59
+Halberd : Bec-de-Corbin : Great Poleaxe : hal : hal : 9h9 : 7h7 : 29 : 51 : 84 : 0 : 25 : 63
+War Scythe : Grim Scythe : Giant Thresher : wsc : wsc : 9wc : 7wc : 34 : 55 : 85 : 0 : 25 : 66
+
+{--type_w_scepters--}
+Sceptre : Rune Sceptre : Mighty Sceptre : scp : scp : 9sc : 7sc : 3 : 31 : 62 : 0 : 19 : 46
+Grand Sceptre : Holy Water Sprinkler : Seraph Rod : gsc : gsc : 9qs : 7qs : 15 : 40 : 76 : 0 : 25 : 57
+War Sceptre : Divine Sceptre : Caduceus : wsp : wsp : 9ws : 7ws : 21 : 45 : 85 : 0 : 25 : 66
+
+{--type_w_spears--}
+Spear : War Spear : Hyperion Spear : spr : spr : 9sr : 7sr : 5 : 33 : 58 : 0 : 21 : 43
+Trident : Fuscina : Stygian Pike : tri : tri : 9tr : 7tr : 9 : 36 : 66 : 0 : 24 : 49
+Brandistock : War Fork : Mancatcher : brn : brn : 9br : 7br : 16 : 41 : 74 : 0 : 25 : 55
+Spetum : Yari : Ghost Spear : spt : spt : 9st : 7st : 20 : 44 : 83 : 0 : 25 : 62
+Pike : Lance : War Pike : pik : pik : 9p9 : 7p7 : 24 : 47 : 85 : 0 : 25 : 66
+
+{--type_w_staves--}
+Short Staff : Jo Staff : Walking Stick : sst : sst : 8ss : 6ss : 1 : 30 : 58 : 0 : 18 : 43
+Long Staff : Quarterstaff : Stalagmite : lst : lst : 8ls : 6ls : 8 : 35 : 66 : 0 : 23 : 49
+Gnarled Staff : Cedar Staff : Elder Staff : cst : cst : 8cs : 6cs : 12 : 38 : 74 : 0 : 25 : 55
+Battle Staff : Gothic Staff : Shillelagh : bst : bst : 8bs : 6bs : 17 : 42 : 83 : 0 : 25 : 62
+War Staff : Rune Staff : Archon Staff : wst : wst : 8ws : 6ws : 24 : 47 : 85 : 0 : 25 : 66
+Horadric Staff : Horadric Staff : Horadric Staff : hst : hst : hst : hst : 0 : 0 : 0 : 0 : 0 : 0
+
+{--type_w_swords--}
+Short Sword : Gladius : Falcata : ssd : ssd : 9ss : 7ss : 1 : 30 : 56 : 0 : 18 : 42
+Scimitar : Cutlass : Ataghan : scm : scm : 9sm : 7sm : 5 : 43 : 61 : 0 : 25 : 45
+Sabre : Shamshir : Elegant Blade : sbr : sbr : 9sb : 7sb : 8 : 35 : 63 : 0 : 23 : 47
+Falchion : Tulwar : Hydra Edge : flc : flc : 9fc : 7fc : 11 : 37 : 69 : 0 : 25 : 51
+Crystal Sword : Dimensional Blade : Phase Blade : crs : crs : 9cr : 7cr : 11 : 37 : 73 : 0 : 25 : 54
+Broad Sword : Battle Sword : Conquest Sword : bsd : bsd : 9bs : 7bs : 15 : 40 : 78 : 0 : 25 : 58
+Long Sword : Rune Sword : Cryptic Sword : lsd : lsd : 9ls : 7ls : 20 : 44 : 82 : 0 : 25 : 61
+War Sword : Ancient Sword : Mythical Sword : wsd : wsd : 9wd : 7wd : 27 : 49 : 85 : 0 : 25 : 66
+Two-Handed Sword : Espadon : Legend Sword : 2hs : 2hs : 92h : 72h : 10 : 37 : 59 : 0 : 25 : 44
+Claymore : Dacian Falx : Highland Blade : clm : clm : 9cm : 7cm : 17 : 42 : 66 : 0 : 25 : 49
+Giant Sword : Tusk Sword : Balrog Blade : gis : gis : 9gs : 7gs : 21 : 45 : 71 : 0 : 25 : 53
+Bastard Sword : Gothic Sword : Champion Sword : bsw : bsw : 9b9 : 7b7 : 24 : 48 : 77 : 0 : 25 : 57
+Flamberge : Zweihander : Colossal Sword : flb : flb : 9fb : 7fb : 27 : 49 : 80 : 0 : 25 : 60
+Great Sword : Executioner Sword : Colossus Blade : gsd : gsd : 9gd : 7gd : 33 : 54 : 85 : 0 : 25 : 63
+
+{--type_w_throwing--}
+Throwing Knife : Battle Dart : Flying Knife : tkn : tkf : 9tk : 7tk : 2 : 31 : 64 : 0 : 19 : 48
+Throwing Axe : Francisca : Flying Axe : tax : tax : 9ta : 7ta : 7 : 34 : 56 : 0 : 22 : 42
+Balanced Knife : War Dart : Winged Knife : bkf : bkf : 9bk : 7bk : 13 : 39 : 77 : 0 : 25 : 57
+Balanced Axe : Hurlbat : Winged Axe : bal : bal : 9b8 : 7b8 : 16 : 41 : 80 : 0 : 25 : 60
+
+{--type_w_wands--}
+Wand : Burnt Wand : Polished Wand : wnd : wnd : 9wn :  : 2 : 31 : 55 : 0 : 19 : 41
+Yew Wand : Petrified Wand : Ghost Wand : ywn : ywn: 9yw : 7yw : 12 : 38 : 65 : 0 : 25 : 48
+Bone Wand : Tomb Wand : Lich Wand : bwn : bwn : 9bw : 7bw : 18 : 43 : 75 : 0 : 25 : 56
+Grim Wand : Grave Wand : Unearthed Wand : gwn : gwn : 9gw : 7gw : 26 : 49 : 86 : 0 : 25 : 64
+
+{--item_properties--}
+None
+\n
+SKILLS
+\n
++#X-#Y to All Skills : allskills
++#X-#Y to Amazon Skills : ama
++#X-#Y to Assassin Skills : ass
++#X-#Y to Barbarian Skills : bar
++#X-#Y to Druid Skills : dru
++#X-#Y to Necromancer Skills : nec
++#X-#Y to Paladin Skills : pal
++#X-#Y to Sorceress Skills : sor
++#X-#Y to Fire Skills : fireskill
++#X-#Y to [Skill Tree #Z] : skilltab
++#X-#Y to [Skill #Z] : skill
++#X-#Y to [Skill #Z] [For All Classes] : oskill
++#Z to Random Skill [Between IDs #X and #Y] : skill-rand
+Level #Y [Skill #Z] (#X Charges) : charged
+Level #X-#Y [Aura #Z] When Equipped : aura
+#X% Chance To Cast Level #Y [Skill #Z] On Attack : att-skill
+#X% Chance To Cast Level #Y [Skill #Z] On Striking : hit-skill
+#X% Chance To Cast Level #Y [Skill #Z] When Struck : gethit-skill
+#X% Chance To Cast Level #Y [Skill #Z] When You Kill An Enemy : kill-skill
+#X% Chance To Cast Level #Y [Skill #Z] When You Die : death-skill
+#X% Chance To Cast Level #Y [Skill #Z] When You Level-Up : levelup-skill
+\n
+ATTRIBUTES
+\n
++#X-#Y to Dexterity : dex
++#X-#Y to Strength : str
++#X-#Y to Vitality : vit
++#X-#Y to Energy : enr
++#X-#Y to All Attributes : all-stats
++[#Z/8] [per level] to Dexterity (Based On Character Level) : dex/lvl
++[#Z/8] [per level] to Strength (Based On Character Level) : str/lvl
++[#Z/8] [per level] to Vitality (Based On Character Level) : vit/lvl
++[#Z/8] [per level] to Energy (Based On Character Level) : enr/lvl
+\n
+LIFE AND MANA
+\n
++#X-#Y to Life : hp
++#X-#Y% to Life : hp%
+Replenish [/ Drain] Life +#X-#Y : regen
++[#Z/8] [per level] to Life (Based On Character Level) : hp/lvl
++#X-#Y to Mana : mana
++#X-#Y% to Mana : mana%
+Regenerate Mana #X-#Y% : regen-mana
++[#Z/8] [per level] to Mana (Based On Character Level) : mana/lvl
+\n
+DEFENCE AND BLOCKING
+\n
++#X-#Y Defence : ac
++#X-#Y% Enhanced Defence : ac%
++[#Z/8] [per level] Defence (Based On Character Level) : ac/lvl
++[#Z/8]% [per level] Defence (Based On Character Level) : ac%/lvl
++#X-#Y Defence vs. Melee : ac-hth
++#X-#Y Defence vs. Missiles : ac-miss
++#X-#Y% Increased Chance Of Blocking : block
++#X-#Y% Faster Block Rate : block2
+Damage Reduced by #X-#Y : red-dmg
+Damage Reduced by #X-#Y% : red-dmg%
+Magic Damage Reduced by #X-#Y : red-mag
+#X-#Y% Damage Taken Goes To Mana : dmg-to-mana
+Attacker Takes Damage of #X-#Y : thorns
+Attacker Takes Lightning Damage of #X-#Y : light-thorns
+Attacker Takes Damage of [#Z/8] [per level] (Based On Character Level) : thorns/lvl
+\n
+DAMAGE
+\n
+Damage +#X-#Y : dmg
++#X-#Y% Enhanced Damage : dmg%
++#X-#Y Minimum Damage : dmg-min
++#X-#Y Maximum Damage : dmg-max
+Adds +#X-#Y Damage : dmg-norm
++#X-#Y to Throw Damage : dmg-throw
++[#Z/8] [per level] to Maximum Damage (Based On Character Level) : dmg/lvl
++[#Z/8]% [per level] to Maximum Damage (Based On Character Level) : dmg%/lvl
++#X-#Y% Damage to Undead : dmg-undead
++#X-#Y% Damage to Demons : dmg-demon
++[#Z/8]% [per level] Damage to Undead (Based On Character Level) : dmg-und/lvl
++[#Z/8]% [per level] Damage to Demons (Based On Character Level) : dmg-dem/lvl
+\n
+ELEMENTAL DAMAGE
+\n
+Adds #X-#Y Fire Damage : dmg-fire
++#X-#Y Minimum Fire Damage : fire-min
++#X-#Y Maximum Fire Damage : fire-max
++#X-#Y% to Fire Skill Damage : extra-fire
+-#X-#Y% to Enemy Fire Resistance : pierce-fire
+Adds #X-#Y Cold Damage [Chills for #Z/25 Seconds] : dmg-cold
++#X-#Y Minimum Cold Damage : cold-min
++#X-#Y Maximum Cold Damage : cold-max
+Cold Duration [[#X/25] to [#Y/25] Seconds] : cold-len
++#X-#Y% to Cold Skill Damage : extra-cold
+-#X-#Y% to Enemy Cold Resistance : pierce-cold
+Adds #X-#Y Lightning Damage : dmg-ltng
++#X-#Y Minimum Lightning Damage : ltng-min
++#X-#Y Maximum Lightning Damage : ltng-max
++#X-#Y% to Lightning Skill Damage : extra-ltng
+-#X-#Y% to Enemy Lightning Resistance : pierce-ltng
++#X-#Y* Poison Damage Over [#Z/25] Seconds : dmg-pois
+Minimum Poison Damage : pois-min
+Maximum Poison Damage : pois-max
+Poison Duration [[#X/25] to [#Y/25] Seconds] : pois-len
++#X-#Y% to Poison Skill Damage : extra-pois
+-#X-#Y% to Enemy Poison Resistance : pierce-pois
+Adds #X-#Y Elemental Damage [Chills for #Z/25 Seconds] : dmg-elem
+Adds #X-#Y Minimum Elemental Damage : dmg-elem-min
+Adds #X-#Y Maximum Elemental Damage : dmg-elem-max
+Adds #X-#Y Magic Damage : dmg-mag
++[#Z/8] [per level] Maximum Fire Damage (Based On Character Level) : dmg-fire/lvl
++[#Z/8] [per level] Maximum Cold Damage (Based On Character Level) : dmg-cold/lvl
++[#Z/8] [per level] Maximum Lightning Damage (Based On Character Level) : dmg-ltng/lvl
++[#Z/8] [per level] Maximum Poison Damage (Based On Character Level) : dmg-pois/lvl
+\n
+SPECIAL DAMAGE EFFECTS
+\n
++#X-#Y% Life Stolen Per Hit : lifesteal
++#X-#Y% Mana Stolen Per Hit : manasteal
++#X-#Y Life After Each Kill : heal-kill
++#X-#Y to Mana After Each Kill : mana-kill
++#X-#Y to Life After Each Demon Kill : demon-heal
+-#X-#Y Target Defence : dmg-ac
+-#X-#Y% Target Defence : reduce-ac
++#X-#Y% Crushing Blow : crush
++#X-#Y% Deadly Strike : deadly
++#X-#Y% Chance Of Open Wounds : openwounds
++[#Z/8]% [per level] Crushing Blow (Based On Character Level) : crush/lvl
++[#Z/8]% [per level] Deadly Strike (Based On Character Level) : deadly/lvl
++[#Z/8]% [per level] Chance Of Open Wounds (Based On Character Level) : wounds/lvl
+Slows Target by #X-#Y% : slow
+Freezes Target +#X-#Y [Affects Chance and Freeze Length] : freeze
+Hit Blinds Target [#X-#Y% Chance] : stupidity
+Hit Causes Monster to Flee #X-#Y% : howl
+Ignore Target's Defence : ignore-ac
+Prevent Monster Heal : noheal
+Knockback : knock
++#X-#Y% Chance to Reanimate As: [Monster Type #Z] : reanimate
+Slain Monsters Rest In Peace : rip
+\n
+MISSILES
+\n
+Fire Magic Arrows [Level #X-#Y] : magicarrow
+Fire Explosive Arrows [Level #X-#Y] : explosivearrow
+Piercing Attack [#X-#Y% Chance] : pierce
+\n
+ATTACK RATING AND SPEED
+\n
++#X-#Y to Attack Rating : att
++#X-#Y% Bonus to Attack Rating : att%
++#X-#Y to Attack Rating vs. Undead : att-undead
++#X-#Y to Attack Rating vs. Demons : att-demon
++#X-#Y% Bonus to Attack Rating vs. [Monster Type #Z] : att-mon%
++#X-#Y [per level] to Attack Rating (Based On Character Level) : att/lvl
++[#Z/8]% [per level] Bonus to Attack Rating (Based On Character Level) : att%/lvl
++#X-#Y [per level] to Attack Rating vs. Undead (Based On Character Level) : att-und/lvl
++#X-#Y [per level] to Attack Rating vs. Demons (Based On Character Level) : att-dem/lvl
++#X-#Y% Increased Attack Speed : swing2
++#X-#Y% Faster Hit Recovery : balance2
++#X-#Y% Faster Cast Rate : cast2
+\n
+DURABILITY, QUANTITY AND REQUIREMENTS
+\n
++#X-#Y to Durability [Not Shown] : dur
+Increase Maximum Durability #X-#Y% : dur%
+Indestructible : indestruct
+Ethereal : ethereal
+Repairs 1 Durability in [100/#X] Seconds : rep-dur
+Increased Stack Size [by #X-#Y] : stack
+Replenishes Quantity [1 per [100/#X] Seconds] : rep-quant
+Requirements -#X-#Y% : ease
++#X-#Y to Required Level [Not Displayed] : levelreq
+\n
+RESISTANCES
+\n
+All Resistances +#X-#Y : res-all
+Fire Resist +#X-#Y% : res-fire
++#X-#Y% to Maximum Fire Resist : res-fire-max
++#X-#Y Fire Absorb : abs-fire
++#X-#Y% Fire Absorb : abs-fire%
+Cold Resist +#X-#Y% : res-cold
++#X-#Y% to Maximum Cold Resist : res-cold-max
++#X-#Y Cold Absorb : abs-cold
++#X-#Y% Cold Absorb : abs-cold%
+Half Freeze Duration : half-freeze
+Cannot Be Frozen : nofreeze
+Lightning Resist +#X-#Y% : res-ltng
++#X-#Y% to Maximum Lightning Resist : res-ltng-max
++#X-#Y Lightning Absorb : abs-ltng
++#X-#Y% Lightning Absorb : abs-ltng%
+Poison Resist +#X-#Y% : res-pois
++#X-#Y% to Maximum Poison Resist : res-pois-max
+Poison Length Reduced by #X-#Y% : res-pois-len
++#X-#Y Magic Absorb : abs-mag
++#X-#Y% Magic Absorb : abs-mag%
+Magic Resist +#X-#Y% : res-mag
++#X-#Y% to Maximum Magic Resist : res-mag-max
+Fire Resist +[#Z/8]% [per level] (Based On Character Level) : res-fire/lvl
+Cold Resist +[#Z/8]% [per level] (Based On Character Level) : res-cold/lvl
+Lightning Resist +[#Z/8]% [per level] (Based On Character Level) : res-ltng/lvl
+Poison Resist +[#Z/8]% [per level] (Based On Character Level) : res-pois/lvl
++[#Z/8] [per level] Fire Absorb (Based On Character Level) : abs-fire/lvl
++[#Z/8] [per level] Cold Absorb (Based On Character Level) : abs-cold/lvl
++[#Z/8] [per level] Lightning Absorb (Based On Character Level) : abs-ltng/lvl
+\n
+MOVEMENT AND STAMINA
+\n
++#X-#Y% Faster Run/Walk : move2
++#X-#Y to Max Stamina : stam
++#X-#Y% Slower Stamina Drain : stamdrain
+Heal Stamina Plus #X-#Y% : regen-stam
++[#Z/8] [per level] to Max Stamina (Based On Character Level) : stam/lvl
+Heal Stamina Plus [#Z/8] [per level]% (Based On Character Level) : regen-stam/lvl
+\n
+TREASURE
+\n
++#X-#Y% Extra Gold From Monsters : gold%
++#X-#Y% Better Chance Of Getting Magic Items : mag%
++[#Z/8]% [per level] Extra Gold From Monsters (Based On Character Level) : gold%/lvl
++[#Z/8]% [per level] Better Chance Of Getting Magic Items (Based On Character Level) : mag%/lvl
+Reduces All Vendor Prices #X-#Y% : cheap
+\n
+MISCELLENEOUS
+\n
+Socketed (#X-#Y) : sock
++#X-#Y to Light Radius : light
++#X-#Y% to Experience Gained : addxp
+Adds Additional Blood [Not Displayed] : bloody
+Fade Character Graphic [Not Displayed] : fade
