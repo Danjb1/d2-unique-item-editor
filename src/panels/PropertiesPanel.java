@@ -26,7 +26,7 @@ import editor.UniqueEditor;
 public class PropertiesPanel extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private UniqueEditor editor;
 	private JList<ItemProperty> list;
 
@@ -40,24 +40,24 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 		this.editor = editor;
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		setPreferredSize(new Dimension(500, 255));
-		
+
 		// Create components
-		
+
 		Border loweredEtched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 		TitledBorder title = BorderFactory.createTitledBorder(
-                loweredEtched, " Properties ");
+				loweredEtched, " Properties ");
 		title.setTitleFont(new Font(Font.SANS_SERIF, Font.BOLD, 12));
 		this.setBorder(title);
-		
+
 		list = new JList<ItemProperty>();
 		list.setModel(new DefaultListModel<ItemProperty>());
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		list.setVisibleRowCount(12);
 		JScrollPane listScroller = new JScrollPane(list, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		listScroller.setPreferredSize(new Dimension(480, 205));
-		
+
 		JPanel buttonPanel = new JPanel();
-		
+
 			JButton addProperty = new JButton("Add Property");
 			addProperty.addActionListener(this);
 			JButton editProperty = new JButton("Edit Property");
@@ -68,17 +68,17 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 			moveUp.addActionListener(this);
 			JButton moveDown = new JButton("\\/");
 			moveDown.addActionListener(this);
-			
+
 			buttonPanel.add(addProperty);
 			buttonPanel.add(editProperty);
 			buttonPanel.add(removeProperty);
 			buttonPanel.add(moveUp);
 			buttonPanel.add(moveDown);
-		
+
 		// Add components
 		add(listScroller);
 		add(buttonPanel);
-		
+
 	}
 
 	/**
@@ -102,31 +102,31 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 			moveDown();
 		}
 	}
-	
+
 	/**
 	 * Creates a frame where a property can be edited
 	 * @param property Property to edit (null to create one from scratch)
 	 */
 	private void createPropertyWindow(ItemProperty property) {
-        final JDialog dialog = new JDialog(editor.getFrame(), "Edit Property", true);
-        final EditPropertiesPanel propertyPanel = new EditPropertiesPanel(editor, dialog, property);
-        dialog.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                propertyPanel.dialogClosed();
-            }
-        });
-        dialog.setContentPane(propertyPanel);
-        dialog.setResizable(false);
-        dialog.setLayout(new BoxLayout(dialog.getContentPane(), BoxLayout.Y_AXIS));
-        dialog.pack();
-        dialog.setLocationRelativeTo(editor.getFrame());
-        // Shift up a little (as dropdown box extends downwards)
-        dialog.setLocation(dialog.getLocation().x, dialog.getLocation().y - 200);
-        dialog.setVisible(true);
+		final JDialog dialog = new JDialog(editor.getFrame(), "Edit Property", true);
+		final EditPropertiesPanel propertyPanel = new EditPropertiesPanel(editor, dialog, property);
+		dialog.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				propertyPanel.dialogClosed();
+			}
+		});
+		dialog.setContentPane(propertyPanel);
+		dialog.setResizable(false);
+		dialog.setLayout(new BoxLayout(dialog.getContentPane(), BoxLayout.Y_AXIS));
+		dialog.pack();
+		dialog.setLocationRelativeTo(editor.getFrame());
+		// Shift up a little (as dropdown box extends downwards)
+		dialog.setLocation(dialog.getLocation().x, dialog.getLocation().y - 200);
+		dialog.setVisible(true);
 	}
 
-    /**
+	/**
 	 * Adds a property to the list
 	 * @param property
 	 */
@@ -140,16 +140,16 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 			insertAtStart = false;
 		} else {
 			index = list.getSelectedIndex();
-		    if (index == -1) {
-		        index = 0;
-		    } else {
-		        index++;
-		    }
+			if (index == -1) {
+				index = 0;
+			} else {
+				index++;
+			}
 		}
-	    listModel.insertElementAt(property, index);
-	    //Select the new item and make it visible.
-	    list.setSelectedIndex(index);
-	    list.ensureIndexIsVisible(index);
+		listModel.insertElementAt(property, index);
+		//Select the new item and make it visible.
+		list.setSelectedIndex(index);
+		list.ensureIndexIsVisible(index);
 	}
 
 	/**
@@ -160,12 +160,12 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 		int index = list.getSelectedIndex();
 		if (index >= 0){
 			listModel.remove(index);
-	        if (index == listModel.getSize()) {
-	            //removed item in last position
-	            index--;
-	        }
-	        list.setSelectedIndex(index);
-	        list.ensureIndexIsVisible(index);
+			if (index == listModel.getSize()) {
+				//removed item in last position
+				index--;
+			}
+			list.setSelectedIndex(index);
+			list.ensureIndexIsVisible(index);
 		}
 	}
 
@@ -199,7 +199,7 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 			list.setSelectedIndex(destination);
 		}
 	}
-	
+
 	/**
 	 * Moves the selected property down
 	 */
@@ -254,7 +254,7 @@ public class PropertiesPanel extends JPanel implements ActionListener {
 	public void clear() {
 		while (list.getSelectedIndex() >= 0){
 			removeProperty();
-		}	
+		}
 	}
 
 }

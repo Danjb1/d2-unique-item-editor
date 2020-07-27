@@ -4,10 +4,10 @@ import javax.swing.JFrame;
 
 public abstract class Editor {
 
-    protected JFrame frame;
+	protected JFrame frame;
 
-    public JFrame getFrame() {
-        return frame;
-    }
-    
+	public JFrame getFrame() {
+		return frame;
+	}
+
 }

@@ -21,7 +21,7 @@ import editor.UniqueEditor;
 public class GraphicsPanel extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private UniqueEditor editor;
 	private Database database;
 	private String imageName = null;
@@ -35,23 +35,23 @@ public class GraphicsPanel extends JPanel implements ActionListener {
 		this.editor = editor;
 		this.database = editor.getDatabase();
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		
+
 		// Create components
-		
+
 		Border loweredEtched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 		TitledBorder title = BorderFactory.createTitledBorder(
-                loweredEtched, " Graphics ");
+				loweredEtched, " Graphics ");
 		title.setTitleFont(new Font(Font.SANS_SERIF, Font.BOLD, 12));
 		this.setBorder(title);
-		
+
 		JPanel panelGraphics = new JPanel();
 		panelGraphics.setPreferredSize(new Dimension(240, 145));
-		
+
 			JLabel labelColourInv = new JLabel("Colour (Inventory):");
 			JLabel labelColourWorld = new JLabel("  Colour (Equipped):");
 			JLabel labelImageInv = new JLabel("Override Inventory Image:");
 			JLabel labelImageWorld = new JLabel("Override World Image:");
-			
+
 			selColourInv = new JComboBox<String>(database.getListColumn(Database.COLOURS, 0));
 			selColourInv.setMaximumRowCount(15);
 			selColourWorld = new JComboBox<String>(database.getListColumn(Database.COLOURS, 0));
@@ -70,10 +70,10 @@ public class GraphicsPanel extends JPanel implements ActionListener {
 			panelGraphics.add(selImageInv);
 			panelGraphics.add(labelImageWorld);
 			panelGraphics.add(selImageWorld);
-			
+
 		// Add components
 		add(panelGraphics);
-		
+
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class GraphicsPanel extends JPanel implements ActionListener {
 			editor.getPreviewPanel().setImage(D2Edit.loadImage(imageName));
 		}
 	}
-	
+
 	/**
 	 * Returns true if an image has been selected to override the standard image
 	 * @return
@@ -223,5 +223,5 @@ public class GraphicsPanel extends JPanel implements ActionListener {
 		selImageInv.setSelectedIndex(0);
 		editor.getGeneralPanel().setImage(img);
 	}
-	
+
 }

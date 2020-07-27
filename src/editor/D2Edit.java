@@ -14,12 +14,12 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-import pcx.PCXImageReader;
-import pcx.PCXImageReaderSpi;
+import ca.mb.javajeff.pcx.PCXImageReader;
+import ca.mb.javajeff.pcx.PCXImageReaderSpi;
 
 /**
  * Main class used to hold global program data.
- * 
+ *
  * @author Dan Bryce
  */
 public class D2Edit {
@@ -29,20 +29,20 @@ public class D2Edit {
 	public static final boolean DEBUG_PRINT_SAVE = true;
 	public static final boolean DEBUG_PRINT_WRITESTRING = true;
 
-    public static final String FILENAME_CONFIG = "preferences.cfg";
-    public static final String FILENAME_DTBL_EXE = 
-            System.getProperty("user.dir") + "/dtbl/dtbl.exe";
-    
-    /**
-     * The loaded database of game data.
-     */
-    private Database database;
-    
-    /**
-     * The currently-open editor.
-     */
-    private Editor editor;
-    
+	public static final String FILENAME_CONFIG = "preferences.cfg";
+	public static final String FILENAME_DTBL_EXE =
+			System.getProperty("user.dir") + "/dtbl/dtbl.exe";
+
+	/**
+	 * The loaded database of game data.
+	 */
+	private Database database;
+
+	/**
+	 * The currently-open editor.
+	 */
+	private Editor editor;
+
 	/**
 	 * Main method to launch the program.
 	 * @param args
@@ -56,7 +56,7 @@ public class D2Edit {
 		}
 		new D2Edit();
 	}
-	
+
 	/**
 	 * Constructor for D2Edit that initialises the program.
 	 */
@@ -90,14 +90,14 @@ public class D2Edit {
 	 */
 	public ArrayList<String> readFile(File file) {
 		BufferedReader in = null;
-	    ArrayList<String> fileContents = new ArrayList<String>();
+		ArrayList<String> fileContents = new ArrayList<String>();
 		try {
 			String nextLine = "";
-		    in = new BufferedReader(new FileReader(file));
-		    in.readLine();	// Skip header row
-		    while ((nextLine = in.readLine()) != null){
-		    	fileContents.add(nextLine);
-		    }
+			in = new BufferedReader(new FileReader(file));
+			in.readLine();	// Skip header row
+			while ((nextLine = in.readLine()) != null){
+				fileContents.add(nextLine);
+			}
 		} catch (IOException ex){
 			JOptionPane.showMessageDialog(editor.getFrame(), "Error reading file!");
 		} finally {
@@ -132,28 +132,28 @@ public class D2Edit {
 		return dir;
 	}
 
-    /**
-     * Gets the user to select the mod's "UniqueItems.txt" file to save to / load from.
-     * @param filename
-     * @param save Is this a Save dialog?
-     * @return
-     */
-    public File getFile(String filename, boolean save) {
-        JFileChooser fc = new JFileChooser();
-        fc.setCurrentDirectory(new File(getDefaultDirectory()));
-        fc.setFileFilter(new FileNameFilter(filename));
-        fc.setAcceptAllFileFilterUsed(false);
-        int returnVal = 0;
-        if (save){
-            fc.setDialogTitle("Select a " + filename + " to save to");
-            returnVal = fc.showSaveDialog(editor.getFrame());
-        } else {
-            fc.setDialogTitle("Select a " + filename + " to load from");
-            returnVal = fc.showOpenDialog(editor.getFrame());
-        }
-        if (returnVal != JFileChooser.APPROVE_OPTION) return null;
-        return fc.getSelectedFile();
-    }
+	/**
+	 * Gets the user to select the mod's "UniqueItems.txt" file to save to / load from.
+	 * @param filename
+	 * @param save Is this a Save dialog?
+	 * @return
+	 */
+	public File getFile(String filename, boolean save) {
+		JFileChooser fc = new JFileChooser();
+		fc.setCurrentDirectory(new File(getDefaultDirectory()));
+		fc.setFileFilter(new FileNameFilter(filename));
+		fc.setAcceptAllFileFilterUsed(false);
+		int returnVal = 0;
+		if (save){
+			fc.setDialogTitle("Select a " + filename + " to save to");
+			returnVal = fc.showSaveDialog(editor.getFrame());
+		} else {
+			fc.setDialogTitle("Select a " + filename + " to load from");
+			returnVal = fc.showOpenDialog(editor.getFrame());
+		}
+		if (returnVal != JFileChooser.APPROVE_OPTION) return null;
+		return fc.getSelectedFile();
+	}
 
 	/**
 	 * Saves the chosen File's directory to make it the default.
@@ -195,25 +195,25 @@ public class D2Edit {
 
 	/**
 	 * Writes the item name to the mod's string table.
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public void writeToStringTbl(String tblFile, String string) throws IOException {
-        if (DEBUG_PRINT_WRITESTRING){
-            System.out.println("Adding string \"" + string + "\" to patchstring.tbl");
-        }
-        if (DEBUG_WRITESTRING_DISABLED){
-            return;
-        }
-        ProcessBuilder pb = new ProcessBuilder(FILENAME_DTBL_EXE, "add", "--duplicate=fail", string, string, enquote(tblFile));
-        pb.start();
+		if (DEBUG_PRINT_WRITESTRING){
+			System.out.println("Adding string \"" + string + "\" to patchstring.tbl");
+		}
+		if (DEBUG_WRITESTRING_DISABLED){
+			return;
+		}
+		ProcessBuilder pb = new ProcessBuilder(FILENAME_DTBL_EXE, "add", "--duplicate=fail", string, string, enquote(tblFile));
+		pb.start();
 	}
 
 	private String enquote(String string) {
-        return "\"" + string + "\"";
-    }
-	
+		return "\"" + string + "\"";
+	}
+
 	public Database getDatabase() {
-        return database;
-    }
+		return database;
+	}
 
 }

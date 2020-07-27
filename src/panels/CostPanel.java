@@ -15,7 +15,7 @@ import javax.swing.border.TitledBorder;
 public class CostPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private JTextField textCostBaseMult, textCostMod;
 
 	/**
@@ -23,20 +23,20 @@ public class CostPanel extends JPanel {
 	 */
 	public CostPanel() {
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		
+
 		// Create components
 		Border loweredEtched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 		TitledBorder title = BorderFactory.createTitledBorder(
-                loweredEtched, " Cost ");
+				loweredEtched, " Cost ");
 		title.setTitleFont(new Font(Font.SANS_SERIF, Font.BOLD, 12));
 		this.setBorder(title);
-		
+
 		JPanel panelCost = new JPanel();
 		panelCost.setPreferredSize(new Dimension(240, 35));
-		
+
 			JLabel labelBaseCostTimes = new JLabel("( Base Cost x ");
 			JLabel labelPlus = new JLabel(") +");
-			
+
 			textCostBaseMult = new JTextField(5);
 			textCostBaseMult.setText("5");
 			textCostMod = new JTextField(5);
@@ -46,7 +46,7 @@ public class CostPanel extends JPanel {
 			panelCost.add(textCostBaseMult);
 			panelCost.add(labelPlus);
 			panelCost.add(textCostMod);
-			
+
 		// Add components
 		add(panelCost);
 	}
@@ -82,5 +82,5 @@ public class CostPanel extends JPanel {
 	public void setCostAdd(String add) {
 		textCostMod.setText(add);
 	}
-	
+
 }

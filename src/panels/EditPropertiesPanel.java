@@ -18,7 +18,7 @@ import editor.UniqueEditor;
 public class EditPropertiesPanel extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private UniqueEditor editor;
 	private Database database;
 	private JDialog dialog;
@@ -38,11 +38,11 @@ public class EditPropertiesPanel extends JPanel implements ActionListener {
 		this.dialog = dialog;
 		this.initialProperty = initialProperty;
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		
+
 		// Create Components
 		selProperty = new JComboBox<String>(database.getListColumn(Database.ITEM_PROPERTIES, 0));
 		selProperty.setMaximumRowCount(30);
-		
+
 		JPanel paramPanel = new JPanel();
 			JLabel labelX = new JLabel("X: ");
 			paramX = new JTextField(10);
@@ -54,7 +54,7 @@ public class EditPropertiesPanel extends JPanel implements ActionListener {
 			buttonSave.addActionListener(this);
 			JButton buttonCancel = new JButton("Cancel");
 			buttonCancel.addActionListener(this);
-			
+
 			paramPanel.add(labelX);
 			paramPanel.add(paramX);
 			paramPanel.add(labelY);
@@ -63,14 +63,14 @@ public class EditPropertiesPanel extends JPanel implements ActionListener {
 			paramPanel.add(paramZ);
 			paramPanel.add(buttonSave);
 			paramPanel.add(buttonCancel);
-			
+
 		if (initialProperty != null){
 			selProperty.setSelectedItem(initialProperty.getDescription());
 			paramX.setText(initialProperty.getParamX());
 			paramY.setText(initialProperty.getParamY());
 			paramZ.setText(initialProperty.getParamZ());
 		}
-		
+
 		// Add Components
 		add(selProperty);
 		add(paramPanel);
@@ -86,23 +86,23 @@ public class EditPropertiesPanel extends JPanel implements ActionListener {
 			String paramCode = database.getListItem(Database.ITEM_PROPERTIES, 1, index);
 			if (paramCode != null){
 				ItemProperty property = new ItemProperty(
-						selProperty.getItemAt(index), 
-						paramCode, 
-						paramX.getText(), 
-						paramY.getText(), 
+						selProperty.getItemAt(index),
+						paramCode,
+						paramX.getText(),
+						paramY.getText(),
 						paramZ.getText());
 				editor.getPropertiesPanel().addProperty(property);
 			} else {
 				return;
 			}
 		} else if (e.getActionCommand().equals("Cancel")){
-	        editor.getPropertiesPanel().addProperty(initialProperty);
+			editor.getPropertiesPanel().addProperty(initialProperty);
 		}
 		dialog.dispose();
 	}
 
-    public void dialogClosed() {
-        editor.getPropertiesPanel().addProperty(initialProperty);
-    }
+	public void dialogClosed() {
+		editor.getPropertiesPanel().addProperty(initialProperty);
+	}
 
 }

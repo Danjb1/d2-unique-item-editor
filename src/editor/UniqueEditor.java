@@ -3,10 +3,20 @@ package editor;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.swing.*;
+import javax.swing.BoxLayout;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import panels.ChooseItemPanel;
 import panels.CostPanel;
@@ -19,12 +29,12 @@ import panels.SoundPanel;
 
 public class UniqueEditor extends Editor implements ActionListener {
 
-    public static final String FILENAME_UNIQUE_ITEMS = "UniqueItems.txt";
-    
-    private D2Edit d2Edit;
-    private Database database;
-    
-    // GUI
+	public static final String FILENAME_UNIQUE_ITEMS = "UniqueItems.txt";
+
+	private D2Edit d2Edit;
+	private Database database;
+
+	// GUI
 	private GeneralPanel general;
 	private PreviewPanel preview;
 	private CostPanel cost;
@@ -38,8 +48,8 @@ public class UniqueEditor extends Editor implements ActionListener {
 	 * @param database
 	 */
 	public UniqueEditor(D2Edit d2Edit, Database database) {
-	    this.d2Edit = d2Edit;
-	    this.database = database;
+		this.d2Edit = d2Edit;
+		this.database = database;
 		createFrame();
 	}
 
@@ -65,7 +75,7 @@ public class UniqueEditor extends Editor implements ActionListener {
 		JPanel bottomPanel = new JPanel();
 			properties = new PropertiesPanel(this);
 			bottomPanel.add(properties);
-		
+
 		// Build MenuBar
 		JMenuBar menuBar = new JMenuBar();
 			JMenu menuFile = new JMenu("File");
@@ -79,7 +89,7 @@ public class UniqueEditor extends Editor implements ActionListener {
 			menuFile.add(menuSave);
 			menuFile.add(menuLoad);
 		menuBar.add(menuFile);
-		
+
 		// Create Frame
 		general.refreshItem();
 		frame = new JFrame("D2Edit");
@@ -134,7 +144,7 @@ public class UniqueEditor extends Editor implements ActionListener {
 
 	/**
 	 * Saves an item.
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	private void saveItem() {
 		// Get File
@@ -143,8 +153,8 @@ public class UniqueEditor extends Editor implements ActionListener {
 		d2Edit.rememberChosenFile(file);
 
 		// Prepare variables
-	    String code = getItemCode();
-		
+		String code = getItemCode();
+
 		// Check for overwrite
 		ArrayList<String> items = d2Edit.readFile(file);
 		for (int i = 0; i < items.size(); i++){
@@ -155,7 +165,7 @@ public class UniqueEditor extends Editor implements ActionListener {
 				return;
 			}
 		}
-		
+
 		// Save to File
 		saveItem(file, code, true, true);
 	}
@@ -163,18 +173,18 @@ public class UniqueEditor extends Editor implements ActionListener {
 	/**
 	 * Creates a window asking the user if an item should be overwritten.
 	 * @param file
-	 * @param items 
+	 * @param items
 	 * @param code
 	 * @param replaceIndex
 	 */
 	private void createOverwriteWindow(File file, ArrayList<String> items, String code, int replaceIndex) {
 		this.frame.setEnabled(false);
 		JFrame frame = new JFrame("Item Exists");
-		
+
 		JPanel panel = new JPanel();
 		OverwritePanel overwritePanel = new OverwritePanel(this, frame, file, items, code, replaceIndex);
 		panel.add(overwritePanel);
-		
+
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setAlwaysOnTop(true);
@@ -196,15 +206,15 @@ public class UniqueEditor extends Editor implements ActionListener {
 	public void saveItem(File file, String code, boolean append, boolean writeString) {
 		BufferedWriter out = null;
 		try {
-			
-		    // Write to string table
+
+			// Write to string table
 			if (writeString){
-			    String tblFile = d2Edit.getTblFileLocation(file);
-			    d2Edit.writeToStringTbl(tblFile, general.getItemName());
+				String tblFile = d2Edit.getTblFileLocation(file);
+				d2Edit.writeToStringTbl(tblFile, general.getItemName());
 			} else if (D2Edit.DEBUG_PRINT_WRITESTRING){
 				System.out.println("String exists; skipping write string");
 			}
-			
+
 			// Write to File
 			if (D2Edit.DEBUG_PRINT_SAVE){
 				if (append){
@@ -217,7 +227,7 @@ public class UniqueEditor extends Editor implements ActionListener {
 				out = new BufferedWriter(new FileWriter(file, append));
 				out.write(code);
 			}
-		    
+
 			JOptionPane.showMessageDialog(frame, "Item saved successfully!");
 		} catch (IOException ex){
 			JOptionPane.showMessageDialog(frame, "Error saving item!");
@@ -238,12 +248,12 @@ public class UniqueEditor extends Editor implements ActionListener {
 		File file = d2Edit.getFile(FILENAME_UNIQUE_ITEMS, false);
 		if (file == null) return;
 		d2Edit.rememberChosenFile(file);
-	    
+
 		// Read File
 		ArrayList<String> fileContents = d2Edit.readFile(file);
-	    
-	    // Open "Select Item" window
-	    createSelectItemWindow(fileContents);
+
+		// Open "Select Item" window
+		createSelectItemWindow(fileContents);
 	}
 
 	/**
@@ -270,33 +280,33 @@ public class UniqueEditor extends Editor implements ActionListener {
 		String invImage = graphics.getInventoryImage();
 		String soundName = sound.getSound();
 		String soundDelay = sound.getDelay();
-		
+
 		String code = name + '\t' + version + '\t' + enabled + '\t' + ladder + '\t' + rarity + '\t' + noLimit + '\t' + level + '\t' + reqLevel + '\t' + itemCode
 				 + '\t' + type + '\t' + uber + '\t' + carryOne + '\t' + costMult + '\t' + costAdd + '\t' + worldColour + '\t' + invColour + '\t' + worldImage
 				 + '\t' + invImage + '\t' + soundName + '\t' + soundDelay + '\t' + soundName + '\t';
-		
+
 		// Add properties
 		for (int i = 0; i < 12; i++){
 			code += properties.getPropertyString(i) + '\t';
 		}
-		
+
 		code += "0" + "\r\n"; // End of line
 		return code;
 	}
-	
+
 	/**
 	 * Creates a frame where an item can be chosen.
 	 */
 	private void createSelectItemWindow(ArrayList<String> items) {
 		JDialog dialog = new JDialog(frame, "Choose Item", true);
 		ChooseItemPanel choosePanel = new ChooseItemPanel(this, dialog, items);
-        dialog.setContentPane(choosePanel);
-        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        dialog.setResizable(false);
-        dialog.setLayout(new BoxLayout(dialog.getContentPane(), BoxLayout.Y_AXIS));
-        dialog.pack();
-        dialog.setLocationRelativeTo(frame);
-        dialog.setVisible(true);
+		dialog.setContentPane(choosePanel);
+		dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		dialog.setResizable(false);
+		dialog.setLayout(new BoxLayout(dialog.getContentPane(), BoxLayout.Y_AXIS));
+		dialog.pack();
+		dialog.setLocationRelativeTo(frame);
+		dialog.setVisible(true);
 	}
 
 	/**
@@ -353,39 +363,39 @@ public class UniqueEditor extends Editor implements ActionListener {
 		}
 	}
 
-    /**
-     * Getter for preview panel.
-     * @return
-     */
-    public PreviewPanel getPreviewPanel() {
-        return preview;
-    }
+	/**
+	 * Getter for preview panel.
+	 * @return
+	 */
+	public PreviewPanel getPreviewPanel() {
+		return preview;
+	}
 
-    /**
-     * Getter for general panel.
-     * @return
-     */
-    public GeneralPanel getGeneralPanel() {
-        return general;
-    }
-    
-    /**
-     * Getter for graphics panel.
-     * @return
-     */
-    public GraphicsPanel getGraphicsPanel(){
-        return graphics;
-    }
+	/**
+	 * Getter for general panel.
+	 * @return
+	 */
+	public GeneralPanel getGeneralPanel() {
+		return general;
+	}
 
-    /**
-     * Getter for properties panel.
-     */
-    public PropertiesPanel getPropertiesPanel() {
-        return properties;
-    }
-    
-    public Database getDatabase() {
-        return database;
-    }
+	/**
+	 * Getter for graphics panel.
+	 * @return
+	 */
+	public GraphicsPanel getGraphicsPanel(){
+		return graphics;
+	}
+
+	/**
+	 * Getter for properties panel.
+	 */
+	public PropertiesPanel getPropertiesPanel() {
+		return properties;
+	}
+
+	public Database getDatabase() {
+		return database;
+	}
 
 }

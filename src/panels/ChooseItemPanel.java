@@ -22,7 +22,7 @@ import editor.UniqueEditor;
 public class ChooseItemPanel extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private UniqueEditor editor;
 	private JDialog dialog;
 	private JList<String> list;
@@ -39,7 +39,7 @@ public class ChooseItemPanel extends JPanel implements ActionListener {
 		this.dialog = dialog;
 		this.items = items;
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		
+
 		// Create Components
 		list = new JList<String>();
 		list.setModel(new DefaultListModel<String>());
@@ -48,7 +48,7 @@ public class ChooseItemPanel extends JPanel implements ActionListener {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (e.getClickCount() >= 2){
-				    // Double click on item
+					// Double click on item
 					accept();
 					close();
 				}
@@ -56,7 +56,7 @@ public class ChooseItemPanel extends JPanel implements ActionListener {
 		});
 		JScrollPane listScroller = new JScrollPane(list, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		listScroller.setPreferredSize(new Dimension(200, 300));
-		
+
 		// Add items to list
 		DefaultListModel<String> listModel = (DefaultListModel<String>) list.getModel();
 		Collections.sort(items);
@@ -64,23 +64,23 @@ public class ChooseItemPanel extends JPanel implements ActionListener {
 		for (String item : items){
 			String[] itemDetails = item.split("\t");
 			if (itemDetails[1].isEmpty()){
-			    // Item has no specified version; this line is probably a comment
-			    itemsToRemove.add(item);
-			    continue;
+				// Item has no specified version; this line is probably a comment
+				itemsToRemove.add(item);
+				continue;
 			}
 			listModel.addElement(itemDetails[0]);
 		}
 		items.removeAll(itemsToRemove);
-			
+
 		JPanel buttonPanel = new JPanel();
 			JButton buttonSave = new JButton("Accept");
 			buttonSave.addActionListener(this);
 			JButton buttonCancel = new JButton("Cancel");
 			buttonCancel.addActionListener(this);
-			
+
 			buttonPanel.add(buttonSave);
 			buttonPanel.add(buttonCancel);
-		
+
 		// Add Components
 		add(listScroller);
 		add(buttonPanel);
@@ -108,7 +108,7 @@ public class ChooseItemPanel extends JPanel implements ActionListener {
 	}
 
 	public void close() {
-	    dialog.dispose();
-    }
-	
+		dialog.dispose();
+	}
+
 }

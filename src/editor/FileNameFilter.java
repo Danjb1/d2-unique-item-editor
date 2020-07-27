@@ -9,12 +9,12 @@ import javax.swing.filechooser.FileFilter;
  */
 public class FileNameFilter extends FileFilter {
 
-    private String filename;
-    
-    public FileNameFilter(String filename) {
-        this.filename = filename;
-    }
-    
+	private String filename;
+
+	public FileNameFilter(String filename) {
+		this.filename = filename;
+	}
+
 	/**
 	 * Accepts folders and "UniqueItems.txt"
 	 */

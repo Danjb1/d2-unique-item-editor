@@ -25,3 +25,7 @@ I can't legally distribute the graphics from Diablo II, so you will need to foll
 1) Use [DC6Con](https://d2mods.info/forum/downloadsystemcat?id=14) to convert all those files from DC6 to PCX.
 
 1) Repeat for **d2exp.mpq** (replace old files when prompted).
+
+## Credits
+
+ - Jeff Friesen for his [PCX reader library](https://www.informit.com/articles/article.aspx?p=684049&seqNum=2)

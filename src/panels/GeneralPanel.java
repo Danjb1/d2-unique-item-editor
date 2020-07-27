@@ -5,7 +5,17 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
@@ -15,12 +25,12 @@ import editor.Database;
 import editor.UniqueEditor;
 
 public class GeneralPanel extends JPanel implements ActionListener {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	private UniqueEditor editor;
 	private Database database;
-	
+
 	private JComboBox<String> selCategory, selClass, selType;
 	private int itemTypes = Database.TYPE_A_ARMOUR;
 	private String imageCode, altImage1, altImage2;
@@ -28,10 +38,10 @@ public class GeneralPanel extends JPanel implements ActionListener {
 			checkImageStandard, checkImageAlt1, checkImageAlt2;
 	private int itemTier;
 	private JTextField textName, textItemLevel, textReqLevel, textRarity;
-	private JCheckBox checkEnabled, checkExpansion, checkLadder, 
+	private JCheckBox checkEnabled, checkExpansion, checkLadder,
 			checkMultispawn, checkLimitOne;
 	private int currentType = -1;
-	
+
 	/**
 	 * Creates a GeneralPanel
 	 * @param editor
@@ -40,40 +50,40 @@ public class GeneralPanel extends JPanel implements ActionListener {
 		this.editor = editor;
 		this.database = editor.getDatabase();
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setPreferredSize(new Dimension(250, 420));
-		
+		setPreferredSize(new Dimension(250, 420));
+
 		// Create components
-		
+
 		Border loweredEtched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 		TitledBorder title = BorderFactory.createTitledBorder(
-                loweredEtched, " General ");
+				loweredEtched, " General ");
 		title.setTitleFont(new Font(Font.SANS_SERIF, Font.BOLD, 12));
 		this.setBorder(title);
-		
+
 		JPanel panelName = new JPanel();
-		
+
 			JLabel labelName = new JLabel("Name:");
-			
+
 			textName = new JTextField(22);
-	
+
 			panelName.add(labelName);
 			panelName.add(textName);
-		
+
 		JPanel panelCategory = new JPanel();
-		
+
 			JLabel labelCategory = new JLabel("Category:");
-			
+
 			selCategory = new JComboBox<String>(database.getListColumn(Database.CATEGORIES, 0));
 			selCategory.setPreferredSize(new Dimension(160, 20));
 			selCategory.addActionListener(this);
 
 			panelCategory.add(labelCategory);
 			panelCategory.add(selCategory);
-			
+
 		JPanel panelClass = new JPanel();
-			
-			JLabel labelClass = new JLabel("      Class:");
-			
+
+			JLabel labelClass = new JLabel("	  Class:");
+
 			selClass = new JComboBox<String>(database.getListColumn(Database.CLASS_ARMOUR, 0));
 			selClass.setPreferredSize(new Dimension(160, 20));
 			selClass.addActionListener(this);
@@ -81,34 +91,34 @@ public class GeneralPanel extends JPanel implements ActionListener {
 
 			panelClass.add(labelClass);
 			panelClass.add(selClass);
-			
+
 		JPanel panelType = new JPanel();
 
-			JLabel labelType = new JLabel("       Type:");
-			
+			JLabel labelType = new JLabel("	   Type:");
+
 			selType = new JComboBox<String>(database.getListColumn(Database.TYPE_A_ARMOUR, itemTier));
 			selType.setPreferredSize(new Dimension(160, 20));
 			selType.addActionListener(this);
 			selType.setMaximumRowCount(15);
-	
+
 			panelType.add(labelType);
 			panelType.add(selType);
-			
+
 		JPanel panelTier = new JPanel();
 		panelTier.setLayout(new BoxLayout(panelTier, BoxLayout.Y_AXIS));
-		
+
 			JLabel labelTier = new JLabel("Item Tier:");
-			
+
 			checkNormal = new JRadioButton("Normal");
 			checkNormal.setSelected(true);
 			checkNormal.addActionListener(this);
-			
+
 			checkExceptional = new JRadioButton("Exceptional");
 			checkExceptional.addActionListener(this);
-	
+
 			checkElite = new JRadioButton("Elite");
 			checkElite.addActionListener(this);
-	
+
 			ButtonGroup tierGroup = new ButtonGroup();
 			tierGroup.add(checkNormal);
 			tierGroup.add(checkExceptional);
@@ -121,42 +131,42 @@ public class GeneralPanel extends JPanel implements ActionListener {
 
 		JPanel panelImage = new JPanel();
 		panelImage.setLayout(new BoxLayout(panelImage, BoxLayout.Y_AXIS));
-			
+
 			JLabel labelImage = new JLabel("Image:");
-		
+
 			checkImageStandard = new JRadioButton("Standard Image");
 			checkImageStandard.setSelected(true);
 			checkImageStandard.addActionListener(this);
-			
+
 			checkImageAlt1 = new JRadioButton("Alt Image 1");
 			checkImageAlt1.addActionListener(this);
 			checkImageAlt1.setEnabled(false);
-	
+
 			checkImageAlt2 = new JRadioButton("Alt Image 2");
 			checkImageAlt2.addActionListener(this);
 			checkImageAlt2.setEnabled(false);
-	
+
 			ButtonGroup imageGroup = new ButtonGroup();
 			imageGroup.add(checkImageStandard);
 			imageGroup.add(checkImageAlt1);
 			imageGroup.add(checkImageAlt2);
-			
+
 			panelImage.add(labelImage);
 			panelImage.add(checkImageStandard);
 			panelImage.add(checkImageAlt1);
 			panelImage.add(checkImageAlt2);
 
 		JPanel panelRadioBoxes = new JPanel();
-		
+
 			panelRadioBoxes.add(panelTier);
 			panelRadioBoxes.add(Box.createRigidArea(new Dimension(10, 0)));
 			panelRadioBoxes.add(panelImage);
 
 
 		JPanel panelItemLevel = new JPanel();
-			
-			JLabel labelItemLevel = new JLabel("       Item Level:");
-			
+
+			JLabel labelItemLevel = new JLabel("	   Item Level:");
+
 			textItemLevel = new JTextField("1");
 			textItemLevel.setPreferredSize(new Dimension(50, 20));
 
@@ -164,9 +174,9 @@ public class GeneralPanel extends JPanel implements ActionListener {
 			panelItemLevel.add(textItemLevel);
 
 		JPanel panelReqLevel = new JPanel();
-			
+
 			JLabel labelReqLevel = new JLabel("Required Level:");
-			
+
 			textReqLevel = new JTextField("1");
 			textReqLevel.setPreferredSize(new Dimension(50, 20));
 
@@ -174,9 +184,9 @@ public class GeneralPanel extends JPanel implements ActionListener {
 			panelReqLevel.add(textReqLevel);
 
 		JPanel panelRarity = new JPanel();
-				
-			JLabel labelRarity = new JLabel("              Rarity:");
-			
+
+			JLabel labelRarity = new JLabel("			  Rarity:");
+
 			textRarity = new JTextField("1");
 			textRarity.setPreferredSize(new Dimension(50, 20));
 
@@ -185,7 +195,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 
 		JPanel panelCheckBoxes = new JPanel();
 			panelCheckBoxes.setPreferredSize(new Dimension(180, 60));
-			
+
 			checkEnabled = new JCheckBox("Enabled");
 			checkEnabled.setSelected(true);
 			checkExpansion = new JCheckBox("Expansion");
@@ -199,7 +209,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 			panelCheckBoxes.add(checkLadder);
 			panelCheckBoxes.add(checkMultispawn);
 			panelCheckBoxes.add(checkLimitOne);
-			
+
 		// Add components
 		add(panelName);
 		add(panelCategory);
@@ -210,7 +220,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 		add(panelReqLevel);
 		add(panelRarity);
 		add(panelCheckBoxes);
-		
+
 	}
 
 	/**
@@ -267,7 +277,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 		 }
 		refreshType();
 	}
-	
+
 	/**
 	 * Refreshes the "Type" dropdown list based on the chosen type
 	 */
@@ -302,7 +312,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 		}
 		// Disable item tier boxes if item type is the same for normal and exceptional columns
 		if (database.getListItem(itemTypes, 4, selType.getSelectedIndex()).equals(
-		        database.getListItem(itemTypes, 5, selType.getSelectedIndex()))){
+				database.getListItem(itemTypes, 5, selType.getSelectedIndex()))){
 			checkNormal.setSelected(true);
 			checkExceptional.setEnabled(false);
 			checkElite.setEnabled(false);
@@ -456,7 +466,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 			return "";
 		}
 	}
-	
+
 	/**
 	 * Getter for inventory image code
 	 * @return
@@ -467,9 +477,9 @@ public class GeneralPanel extends JPanel implements ActionListener {
 		} else if (checkImageAlt2.isSelected()){
 			return "inv" + altImage2;
 		} else {
-		    // The user has opted for the standard graphic, so we return it
-		    // explicitly. If we leave this blank, some items will automatically
-		    // apply a unique image.
+			// The user has opted for the standard graphic, so we return it
+			// explicitly. If we leave this blank, some items will automatically
+			// apply a unique image.
 			return "inv" + imageCode;
 		}
 	}
@@ -561,7 +571,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 	public void setItemCode(String itemCode) {
 		// For every item type...
 		for (int fileId = Database.TYPE_A_ARMOUR; fileId <= Database.TYPE_W_WANDS; fileId++){
-			
+
 			// For every item tier...
 			int normalColumn = 4;
 			int eliteColumn = 6;
@@ -571,7 +581,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 				String[] items = database.getListColumn(fileId, tierColumn);
 				for (int i = 0; i < items.length; i++){
 					if (items[i].equals(itemCode)){	// Match found
-						
+
 						// Set item tier
 						itemTier = tierColumn - normalColumn;
 						if (itemTier == 0){
@@ -581,7 +591,7 @@ public class GeneralPanel extends JPanel implements ActionListener {
 						} else {
 							checkElite.setSelected(true);
 						}
-						
+
 						// Set category and class
 						if (fileId <= Database.TYPE_A_SHIELDS){
 							selCategory.setSelectedIndex(0);
@@ -596,12 +606,12 @@ public class GeneralPanel extends JPanel implements ActionListener {
 							refreshClass();
 							selClass.setSelectedIndex(fileId - Database.TYPE_W_AMAZON);
 						}
-						
+
 						// Set type
 						refreshType();
 						selType.setSelectedIndex(i);
 						return;
-						
+
 					}
 				}
 			}
@@ -637,5 +647,5 @@ public class GeneralPanel extends JPanel implements ActionListener {
 			editor.getPreviewPanel().setImage(D2Edit.loadImage(imageCode));
 		}
 	}
-	
+
 }
